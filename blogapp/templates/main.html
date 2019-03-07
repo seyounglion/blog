@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+<style>
+    
+body{
+        background-image: url( '/static/lion4.png' );
+        background-size: 100% 100%;
+}
+
+.text1{
+    color:white;
+    text-align: center; 
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+}
+.footer {
+  color:white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+</style>
+
+<body>
+    <h1 class="text1">LIKELION BLOG</h1>
+    <div class="footer"><p>Company © SEOUL WOMEN’S UNIVERSITY Jung Se-young. All rights reserved.</p></div>
+</body>
+
+
+{%endblock%}

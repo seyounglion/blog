@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<style> 
+    body{
+        background-image: url( '/static/littlelion.png' );
+        background-size: 100% 100%;
+    }
+    .center {
+    text-align: center;
+    }
+    .WhiteText{
+    color:white;
+    }
+</style>    
+
+<div class="center">
+<div class="container">
+    <h1 class="WhiteText">Login</h1>
+    <form method = "POST" action="{%url 'login' %}">
+        {% csrf_token %} <!--난수 발생기 (보안 위해)-->
+        <br>
+        <h6 class="WhiteText">Username: </h6> 
+        <input name = "username" type="text" value="">
+        <br>
+        <br>
+        <h6 class="WhiteText">Password: </h6>
+        <input name = "password" type="password" value="">
+        <br>
+        <br>
+        <input class = "btn btn-primary" type="submit" value="Login">
+    </form>
+</div>
+</div>
+
+{%endblock%}
