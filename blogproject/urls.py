@@ -8,8 +8,11 @@ from django.conf.urls.static import static #미디어
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', blogapp.views.home, name="home"),
-    path('main/',blogapp.views.main, name="main"),
+    #path('', blogapp.views.home, name="home"),
+    #path('main/',blogapp.views.main, name="main"),
+    path('home/', blogapp.views.home, name="home"), #바꾼 것
+    path('',blogapp.views.main, name="main"), #바꾼 것
+
     path('blog/', include('blogapp.urls')),
     #path('blog/<int:blog_id>',blogapp.views.detail, name="detail"),
     #path('blog/new/', blogapp.views.new, name="new"),
